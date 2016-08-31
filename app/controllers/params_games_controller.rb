@@ -14,6 +14,7 @@ class ParamsGamesController < ApplicationController
   def numbers
     @number = 37
     @guess = params[:guess]
+
     if @guess != nil
       if @guess.to_i == @number
         @message = 'You guessed correctly!'
@@ -23,7 +24,7 @@ class ParamsGamesController < ApplicationController
         @message = 'You guessed too high, guess a lower number'
       end
     end
-    @message = 'You did not guess a number' 
+  @message = 'You did not guess a number between 1 and 100' 
   
   end
 end
