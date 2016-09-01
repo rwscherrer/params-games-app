@@ -1,0 +1,27 @@
+<h1>Guess a number between 1 and 100<h1>
+
+<!-- <form action="/send_form" method="post">
+  <div>
+  <label for="form_message">Enter Message</label>
+  <input type="text" id="form_message" name="message">
+  </div>
+  
+  <div>
+  <input type="submit" value="Send Message">
+  </div>
+  </form> -->
+
+
+
+<h2><%= form_tag '/send_form', method: :post do %></h2>
+  <div>
+    <%= label_tag :guess, 'Enter Your Guess' %>
+    <%= text_field_tag :guess, nil, placeholder: 'your guess here' %>
+  </div>
+  <div>
+    <%= submit_tag 'Submit' %>
+  </div>
+
+<% end %>
+
+
